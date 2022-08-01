@@ -19,11 +19,6 @@ class MyCircularQueue:
 
     def dequeue(self) -> bool:
         # Write code here
-        if (self.front == self.rear):
-            temp=self.queue[self.front]
-            self.front = -1
-            self.rear = -1
-            return temp
         if not self.is_empty():
             if self.front == self.rear:
                 self.front = -1
@@ -60,7 +55,7 @@ class MyCircularQueue:
 
     def is_full(self):
         # Write code here
-        if self.rear == self.size - 1 and self.front == 0 or self.front == self.rear + 1:
+        if (self.rear == self.size - 1 and self.front == 0) or self.front == self.rear + 1:
             return True
         else:
             return False
