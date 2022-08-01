@@ -8,6 +8,8 @@ class MyCircularQueue:
 
     def enqueue(self, value: int) -> bool:
         # Write code here
+        if self.rear == self.size-1:
+            self.rear = 0
         if not self.is_full():
             self.queue.append(value)
             self.rear += 1
