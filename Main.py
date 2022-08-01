@@ -11,7 +11,7 @@ class MyCircularQueue:
         if not is_full():
             self.queue.append(value)
             self.rear += 1
-            if self.front == -1
+            if self.front == -1:
                self.front = 0
             return True
         else:
